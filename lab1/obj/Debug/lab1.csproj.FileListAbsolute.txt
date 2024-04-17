@@ -1,0 +1,6 @@
+C:\Users\gruze\Desktop\sem_4\Platformy_technologiczne\csharp\lab1\bin\Debug\lab1.exe
+C:\Users\gruze\Desktop\sem_4\Platformy_technologiczne\csharp\lab1\bin\Debug\lab1.pdb
+C:\Users\gruze\Desktop\sem_4\Platformy_technologiczne\csharp\lab1\obj\Debug\lab1.csproj.AssemblyReference.cache
+C:\Users\gruze\Desktop\sem_4\Platformy_technologiczne\csharp\lab1\obj\Debug\lab1.csproj.CoreCompileInputs.cache
+C:\Users\gruze\Desktop\sem_4\Platformy_technologiczne\csharp\lab1\obj\Debug\lab1.exe
+C:\Users\gruze\Desktop\sem_4\Platformy_technologiczne\csharp\lab1\obj\Debug\lab1.pdb
