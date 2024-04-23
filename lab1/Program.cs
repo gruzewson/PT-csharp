@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+
 
 namespace lab1
 {
@@ -9,6 +9,7 @@ namespace lab1
     {
         public static void Main(string[] args)
         {
+            AppContext.SetSwitch("System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization", true);
             if (args.Length == 0)
             {
                 Console.WriteLine("No arguments");
