@@ -27,8 +27,12 @@ namespace lab1
             Console.WriteLine($"\nCatalog '{directoryPath}' contents:");
             DateTime oldestDate = PrintContentsAndFindOldest(directoryPath, "");
             Console.WriteLine($"\nOldest file: {oldestDate}\n");
+
+            SortedDictionary<string, long> sorted = CreateSortedCollection(directory);
+            SerializeAndDeserializeCollection(sorted);
+
         }
-        
+
         static DateTime PrintContentsAndFindOldest(string directoryPath, string tabs)
         {
             DateTime oldestDate = DateTime.MaxValue;
@@ -46,11 +50,13 @@ namespace lab1
                     DateTime fileCreatedDate = File.GetCreationTime(file);
                     oldestDate = oldestDate < fileCreatedDate ? oldestDate : fileCreatedDate;
                 }
+
                 foreach (string dir in directories)
                 {
                     int size = Directory.GetDirectories(dir).Length + Directory.GetFiles(dir).Length;
                     Console.WriteLine($"{tabs} {Path.GetFileName(dir)} ({size}) ----");
-                    DateTime newDate = PrintContentsAndFindOldest(Path.Combine(directoryPath, Path.GetFileName(dir)), tabs); //Path.combine obsługuje znaki separatorów ścieżek
+                    //Path.combine obsługuje znaki separatorów ścieżek
+                    DateTime newDate = PrintContentsAndFindOldest(Path.Combine(directoryPath, Path.GetFileName(dir)), tabs); 
                     oldestDate = oldestDate < newDate ? oldestDate : newDate;
                 }
             }
@@ -58,8 +64,10 @@ namespace lab1
             {
                 Console.WriteLine($"Directory not found: {ex.Message}");
             }
+
             return oldestDate;
         }
+
         static string GetAttributes(FileSystemInfo info)
         {
             string attributes = "";
@@ -80,7 +88,61 @@ namespace lab1
             else
                 attributes += "-";
             return attributes;
-        } 
-        
+        }
+
+        static SortedDictionary<string, long> CreateSortedCollection(DirectoryInfo directory)
+        {
+            var comparer = new FilesComparer();
+            var sortedCollection = new SortedDictionary<string, long>(comparer);
+            foreach (var file in directory.GetFiles())
+            {
+                sortedCollection.Add(file.Name, file.Length);
+            }
+
+            foreach (var dir in directory.GetDirectories())
+            {
+                sortedCollection.Add(dir.Name, dir.GetFiles().Length + dir.GetDirectories().Length);
+            }
+            
+            Console.WriteLine("\nSorted collection:");
+            foreach (var element in sortedCollection)
+            {
+                Console.WriteLine($"{element.Key} -> {element.Value}");
+            }
+
+            return sortedCollection;
+        }
+
+        [Serializable]
+        class FilesComparer : IComparer<string>
+        {
+            public int Compare(string x, string y)
+            {
+                if (x.Length > y.Length)
+                    return 1;
+                if (x.Length < y.Length)
+                    return -1;
+                return string.Compare(x, y, StringComparison.Ordinal);
+            }
+        }
+
+        static void SerializeAndDeserializeCollection(SortedDictionary<string, long> sorted)
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            using (FileStream stream = new FileStream("sorted.bin", FileMode.Create))
+            {
+                formatter.Serialize(stream, sorted);
+            }
+            using (FileStream stream = new FileStream("sorted.bin", FileMode.Open))
+            {
+                SortedDictionary<string, long> newSorted;
+                newSorted = (SortedDictionary<string, long>)formatter.Deserialize(stream);
+                Console.WriteLine("\nDeserialized collection:");
+                foreach (var element in newSorted)
+                {
+                    Console.WriteLine($"{element.Key} -> {element.Value}");
+                }
+            }
+        }
     }
 }
