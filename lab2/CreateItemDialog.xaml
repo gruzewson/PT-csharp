@@ -1,0 +1,33 @@
+﻿<Window x:Class="lab2.CreateItemDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Create Item" Height="250" Width="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Name:"/>
+        <TextBox x:Name="itemNameTextBox" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <RadioButton x:Name="fileRadioButton" Content="File" Margin="5" Checked="FileRadioButton_Checked"/>
+            <RadioButton x:Name="directoryRadioButton" Content="Directory" Margin="5" Checked="DirectoryRadioButton_Checked"/>
+        </StackPanel>
+        
+        <CheckBox x:Name="readOnlyCheckBox" Content="Read Only" Grid.Row="3" Margin="5"/>
+        <CheckBox x:Name="archiveCheckBox" Content="Archive" Grid.Row="4" Margin="5"/>
+        <CheckBox x:Name="systemCheckBox" Content="System" Grid.Row="5" Margin="5"/>
+        <CheckBox x:Name="hiddenCheckBox" Content="Hidden" Grid.Row="6" Margin="5"/>
+
+        <Button Content="Create" Grid.Row="7" HorizontalAlignment="Center" Click="CreateButton_Click" Margin="5"/>
+    </Grid>
+</Window>
