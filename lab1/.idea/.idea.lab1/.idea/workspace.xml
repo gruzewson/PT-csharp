@@ -8,8 +8,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b101080-52d2-43a8-b8f3-17fb34aeaa71" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/lab1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/lab1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/lab1.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/lab1.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/lab1.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/lab1.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/lab1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/lab1.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/lab1.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/ref/lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/ref/lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/.idea/.idea.lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.idea/.idea.lab2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/bin/Debug/net8.0-windows/lab2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/bin/Debug/net8.0-windows/lab2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/bin/Debug/net8.0-windows/lab2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/bin/Debug/net8.0-windows/lab2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/bin/Debug/net8.0-windows/lab2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/bin/Debug/net8.0-windows/lab2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/lab2.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/lab2.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/lab2.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/lab2.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/lab2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/lab2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/lab2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/lab2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/lab2.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/lab2.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/ref/lab2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/ref/lab2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/refint/lab2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/obj/Debug/net8.0-windows/refint/lab2.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +117,7 @@
       <updated>1713907985970</updated>
       <workItem from="1713907985974" duration="1524000" />
       <workItem from="1715067948830" duration="15000" />
+      <workItem from="1715181462842" duration="1829000" />
     </task>
     <servers />
   </component>

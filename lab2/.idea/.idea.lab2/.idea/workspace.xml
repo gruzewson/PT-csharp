@@ -7,7 +7,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0bc807e-aeec-4aa8-9940-628d342e0ca0" name="Changes" comment="" />
+    <list default="true" id="a0bc807e-aeec-4aa8-9940-628d342e0ca0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../lab1/.idea/.idea.lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/.idea/.idea.lab1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/bin/Debug/net8.0/lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/bin/Debug/net8.0/lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/bin/Debug/net8.0/lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/bin/Debug/net8.0/lab1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/bin/Debug/net8.0/lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/bin/Debug/net8.0/lab1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/lab1.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/lab1.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/lab1.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/lab1.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/lab1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/lab1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/lab1.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/lab1.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/ref/lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/ref/lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/refint/lab1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/obj/Debug/net8.0/refint/lab1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0-windows/lab2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0-windows/lab2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0-windows/lab2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0-windows/lab2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0-windows/lab2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0-windows/lab2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0-windows/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0-windows/lab2.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0-windows/lab2.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0-windows/lab2.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0-windows/lab2.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0-windows/lab2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0-windows/lab2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0-windows/lab2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0-windows/lab2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0-windows/lab2.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0-windows/lab2.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0-windows/ref/lab2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0-windows/ref/lab2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0-windows/refint/lab2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0-windows/refint/lab2.dll" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,8 +57,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/gruze/Desktop/sem_4/Platformy_technologiczne/csharp/lab1/obj/Debug/net8.0/lab1.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../lab1/obj/Debug/net8.0/lab1.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/obj/Debug/net8.0-windows/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -99,6 +124,8 @@
       <workItem from="1715090217849" duration="11446000" />
       <workItem from="1715117463589" duration="842000" />
       <workItem from="1715163294090" duration="2070000" />
+      <workItem from="1715165495718" duration="156000" />
+      <workItem from="1715181490755" duration="1919000" />
     </task>
     <task id="LOCAL-00001" summary="added window">
       <option name="closed" value="true" />
@@ -124,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715118213074</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="b">
+      <option name="closed" value="true" />
+      <created>1715165587335</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715165587335</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +172,7 @@
     <MESSAGE value="added window" />
     <MESSAGE value="added tree view and deleting" />
     <MESSAGE value="finished?" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished?" />
+    <MESSAGE value="b" />
+    <option name="LAST_COMMIT_MESSAGE" value="b" />
   </component>
 </project>
