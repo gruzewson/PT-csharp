@@ -6,8 +6,7 @@ namespace Lab3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-
+            
             List<Car> myCars = new List<Car>(){
                 new Car("E250", new Engine(1.8, 204, "CGI"), 2009),
                 new Car("E350", new Engine(3.5, 292, "CGI"), 2009),
@@ -27,9 +26,18 @@ namespace Lab3
                 let h = car.Motor.HorsePower / car.Motor.Displacement
                 select new { model = engineType, hppl = h };
             
-            foreach (var result in query1)
+            var query2 = 
+                from item in query1
+                group item by item.model into grouped
+                select new
+                {
+                    Model = grouped.Key,
+                    AvgHPPL = grouped.Average(x => x.hppl)
+                };
+            
+            foreach (var result in query2)
             {
-                Console.WriteLine($"Model: {result.model}, HPPL: {result.hppl}");
+                Console.WriteLine($"{result.Model}: {result.AvgHPPL}");
             }
 
         }
