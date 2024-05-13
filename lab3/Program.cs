@@ -9,8 +9,9 @@ namespace Lab3
     {
         static void Main(string[] args)
         {
-            
-            List<Car> myCars = new List<Car>(){
+
+            List<Car> myCars = new List<Car>()
+            {
                 new Car("E250", new Engine(1.8, 204, "CGI"), 2009),
                 new Car("E350", new Engine(3.5, 292, "CGI"), 2009),
                 new Car("A6", new Engine(2.5, 187, "FSI"), 2012),
@@ -21,23 +22,24 @@ namespace Lab3
                 new Car("S6", new Engine(4.0, 414, "TFSI"), 2012),
                 new Car("S8", new Engine(4.0, 513, "TFSI"), 2012)
             };
-            
+
             Task1(myCars);
-            
+
             SerializeCars("cars.xml", myCars);
             List<Car> deserializedCars = DeserializeCars("cars.xml");
-            
+
             Console.WriteLine("\n--------------Task2--------------");
             foreach (var car in deserializedCars)
             {
                 Console.WriteLine($"Model: {car.Model}, Year: {car.Year}, Engine: {car.Motor.Model}");
             }
-            
+
             Console.WriteLine("\n--------------Task3--------------");
             XElement rootNode = XElement.Load("cars.xml");
-            double avgHP = (double) rootNode.XPathEvaluate("sum(//car[engine/@model != 'TDI']/engine/horsePower) div count(//car[engine/@model != 'TDI']/engine)");
-            Console.WriteLine("avg HP: "+ avgHP);
-            
+            double avgHP = (double)rootNode.XPathEvaluate(
+                "sum(//car[engine/@model != 'TDI']/engine/horsePower) div count(//car[engine/@model != 'TDI']/engine)");
+            Console.WriteLine("avg HP: " + avgHP);
+
             IEnumerable<string> models = rootNode.XPathSelectElements("//car/model").Select(x => x.Value).Distinct();
             Console.WriteLine("\nCar Models:");
             foreach (var model in models)
@@ -48,30 +50,37 @@ namespace Lab3
 
         static void Task1(List<Car> myCars)
         {
-            var query1 = 
+            var query1 =
                 from car in myCars
                 where car.Model == "A6"
                 let engineType = car.Motor.Model == "TDI" ? "diesel" : "petrol"
                 let h = car.Motor.HorsePower / car.Motor.Displacement
                 select new { model = engineType, hppl = h };
-            
-            var query2 = 
+
+            var query2 =
                 from item in query1
-                group item by item.model into grouped
+                group item by item.model
+                into grouped
                 select new
                 {
                     Model = grouped.Key,
                     AvgHPPL = grouped.Average(x => x.hppl)
                 };
-            
+
             Console.WriteLine("\n--------------Task1--------------");
             foreach (var result in query2)
             {
                 Console.WriteLine($"{result.Model}: {result.AvgHPPL}");
             }
+
+            createXmlFromLinq(myCars);
+
+            createXHTML(myCars);
+            
+            modifyXml("cars.xml");
         }
-        
-        
+
+
 
         static void SerializeCars(string filePath, List<Car> cars)
         {
@@ -89,6 +98,7 @@ namespace Lab3
             );
             carsXml.Save(filePath);
         }
+
         static List<Car> DeserializeCars(string filePath)
         {
             XElement root = XElement.Load(filePath);
@@ -108,5 +118,65 @@ namespace Lab3
 
             return cars;
         }
+
+        static void createXmlFromLinq(List<Car> myCars)
+        {
+            IEnumerable<XElement> nodes = from car in myCars
+                select new XElement("car",
+                    new XElement("model", car.Model),
+                    new XElement("engine",
+                        new XAttribute("model", car.Motor.Model),
+                        new XElement("displacement", car.Motor.Displacement),
+                        new XElement("horsePower", car.Motor.HorsePower)
+                    ),
+                    new XElement("year", car.Year)
+                );
+
+            XElement rootNode = new XElement("cars", nodes);
+            rootNode.Save("CarsFromLinq.xml");
+        }
+
+        static void createXHTML(List<Car> myCars)
+        {
+            var template = File.ReadAllText("template.html");
+
+            XElement table = new XElement("table",
+                new XElement("tr",
+                    new XElement("th", "Model"),
+                    new XElement("th", "Engine"),
+                    new XElement("th", "Displacement"),
+                    new XElement("th", "HorsePower"),
+                    new XElement("th", "Year")
+                ),
+                from car in myCars
+                select new XElement("tr",
+                    new XElement("td", car.Model),
+                    new XElement("td", car.Motor.Model),
+                    new XElement("td", car.Motor.Displacement),
+                    new XElement("td", car.Motor.HorsePower),
+                    new XElement("td", car.Year)
+                )
+            );
+
+            template = template.Replace("--table--", table.ToString());
+
+            File.WriteAllText("table.html", template);
+        }
+
+        static void modifyXml(string filePath)
+        {
+            XElement root = XElement.Load(filePath);
+            
+            foreach (var carElement in root.Elements("car"))
+            {
+                carElement.Element("engine").Element("horsePower").Name = "hp";
+            
+                XElement yearElement = carElement.Element("year");
+                yearElement.Remove();
+                carElement.Element("model").Add(new XAttribute("year", yearElement.Value));
+            }
+            root.Save("modified" + filePath);
+        }
+
     }
 }
