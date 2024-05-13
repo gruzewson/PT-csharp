@@ -1,4 +1,5 @@
-﻿using lab3;
+﻿using System.Xml.Serialization;
+using lab3;
 
 namespace Lab3
 {
@@ -11,8 +12,15 @@ namespace Lab3
             this.Year = year;
         }
 
+        public Car()
+        {
+        }
+
         private string model;
+        
+        //[XmlElement("Engine")]
         private Engine motor;
+        
         private int year;
 
         public string Model

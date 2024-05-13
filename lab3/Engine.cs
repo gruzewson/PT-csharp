@@ -8,6 +8,10 @@ public class Engine
         this.horsePower = horsePower;
         this.model = model;
     }
+    
+    public Engine()
+    {
+    }
 
     private double displacement;
     private double horsePower;
